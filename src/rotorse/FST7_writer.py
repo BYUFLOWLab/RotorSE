@@ -734,6 +734,7 @@ class Fst7InputWriter(Fst7InputBase):
 		# 	 self.fst_vt.blade_aero.FoilNm[i] = os.path.join('AeroData', 'Airfoil' + str(i) + '.dat')
 		# 	 self.writeAirfoilFile(af_name, i, 2)
 
+		#ad_file = os.path.join(self.fst_directory,self.fst_vt.input_files.ADFile)
 		ad_file = os.path.join(self.fst_directory,self.fst_vt.input_files.ADFile)
 		ofh = open(ad_file,'w')
 		

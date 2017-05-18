@@ -31,7 +31,7 @@ rotor.driver.opt_settings['Major optimality tolerance'] = 1e-6
 rotor.driver.add_objective('obj')
 
 rotor.driver.add_desvar('r_max_chord', lower=0.1, upper=0.5)
-# rotor.driver.add_desvar('chord_sub', lower=1.3, upper=5.3)
+rotor.driver.add_desvar('chord_sub', lower=1.3, upper=5.3)
 # rotor.driver.add_desvar('theta_sub', lower=-10.0, upper=30.0)
 # rotor.driver.add_desvar('control:tsr', lower=3.0, upper=9.0)
 # rotor.driver.add_desvar('sparT', lower=0.005, upper=0.2)
@@ -59,23 +59,20 @@ Triax_UTS = 700.0*10**6.0 # Pa
 Carbon_UTS = 1546.0*10**6.0
 Carbon_UCS = 1546.0*10**6.0
 
-rotor.driver.add_constraint('ELT5500_sigma_x', lower=-ELT5500_UCS,upper=ELT5500_UTS)
-rotor.driver.add_constraint('ELT5500_sigma_y', lower=-ELT5500_UCS,upper=ELT5500_UTS)
-rotor.driver.add_constraint('Carbon_sigma_y', lower=-Carbon_UCS,upper=Carbon_UTS)
-rotor.driver.add_constraint('Triax_sigma_x', lower=-Triax_UTS,upper=Triax_UTS) # unsure what Triax_UCS is; maybe 0?
+# rotor.driver.add_constraint('ELT5500_sigma_x', lower=-ELT5500_UCS,upper=ELT5500_UTS)
+# rotor.driver.add_constraint('ELT5500_sigma_y', lower=-ELT5500_UCS,upper=ELT5500_UTS)
+# rotor.driver.add_constraint('Carbon_sigma_y', lower=-Carbon_UCS,upper=Carbon_UTS)
+# rotor.driver.add_constraint('Triax_sigma_x', lower=-Triax_UTS,upper=Triax_UTS) # unsure what Triax_UCS is; maybe 0?
 
 # critical deflection
 tsf = 1.35*1.1*1.0  # from Sandia paper
 avail_clearance = 10.50  # from Sandia paper
 
-rotor.driver.add_constraint('crit_def', lower=-avail_clearance/tsf, upper=avail_clearance/tsf)
+#rotor.driver.add_constraint('crit_def', lower=-avail_clearance/tsf, upper=avail_clearance/tsf)
 
 # fatigue
-rotor.driver.add_constraint('fatigue', upper=1.0)#lower=-0.2988)
+#rotor.driver.add_constraint('fatigue', upper=1.0)#lower=-0.2988)
 
-
-#rotor.driver.add_constraint('con_Test_FAST', lower=0.2)#lower=-0.2988)
-#rotor.driver.add_constraint('con_Test_FAST', lower=6.25)#lower=-0.2988)
 
 rotor.setup(check=False)
 

@@ -12,10 +12,33 @@ plot_constraints = 0
 plotcurves = 0
 plot_instance = 0
 plot_lin_reg = 0
-plot_chord = 1
+plot_chord = 0
 plot_span_moments = 0
 plot_ltd = 0
 plot_theta = 0
+plot_doe = 1
+
+if plot_doe == 1:
+
+    doe_runs = [1,2,4,8]
+    run_actual_time =  np.array([9.813*18.0, 7.672*18.0/1.998, 6.118*18.0, 6.023*18.0])
+    run_goal_time = np.array([run_actual_time[0], run_actual_time[0]/2, run_actual_time[0]/4, run_actual_time[0]/8])
+
+    plt.figure()
+    plt.title('Run Time of First Iteration')
+    #plt.plot(r,chord0,'-*', label = 'original design')
+    plt.plot(doe_runs,run_actual_time,'-*', label = 'Actual Run Time')
+    plt.plot(doe_runs,run_goal_time,'-*', label='Run Time Goal')
+    plt.xlabel('Number of Parallel Processes')
+    plt.ylabel('Run Time (s)')
+    # plt.ylabel('Generated Power (kW)')
+    #plt.xlim([3,25])
+    #plt.xlim([11,15])
+    #plt.ylim([0,50])
+    #plt.ylim([0,6000])
+    plt.legend(loc=3)
+    plt.show()
+    quit()
 
 if plot_ltd == 1:
     r_max_chord = np.linspace(0.1, 0.5, 20)
@@ -307,9 +330,6 @@ if plot_lin_reg == 1:
     plt.xlim([0, tl])
     plt.ylim([0,6000])
     plt.show()
-
-
-
 
 # speed = [3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 # d = [0.08,0.1666,0.2644,0.3722,0.5044,0.6475,0.8186,0.9935,1.17,1.337,1.504,1.686,1.858,2.029]
