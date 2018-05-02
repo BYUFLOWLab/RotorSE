@@ -1,0 +1,21 @@
+
+ ==============================
+ S N O P T  7.2-12.3 (Aug 2014)
+ ==============================
+ 
+ SNMEMB EXIT 100 -- finished successfully
+ SNMEMB INFO 104 -- memory requirements estimated
+
+ ==============================
+ S N O P T  7.2-12.3 (Aug 2014)
+ ==============================
+ 
+ 
+
+ Nonlinear constraints      75     Linear constraints       0
+ Nonlinear variables        19     Linear variables         0
+ Jacobian  variables        19     Objective variables     19
+ Total constraints          75     Total variables         19
+ 
+
+ 
