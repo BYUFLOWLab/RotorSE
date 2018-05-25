@@ -66,7 +66,7 @@ variable points: r_max_chord_0 chord_sub_0_1_2_3 theta_sub_0_1_2_3
 -- place holder --
 -- place holder --
 -- place holder --
-pt_67 2.165
+pt_67 2.946
 -- place holder --
 -- place holder --
 -- place holder --
