@@ -2789,7 +2789,7 @@ class RotorSE(Group):
 
         if FASTinfo['use_FAST']:
 
-            from blade_damage import CreateFASTConfig, CreateFASTConstraints, Calculate_FAST_sm_training_points
+            from damage_components import CreateFASTConfig, CreateFASTConstraints, Calculate_FAST_sm_training_points
 
             WND_File_List = FASTinfo['wnd_list']
 
