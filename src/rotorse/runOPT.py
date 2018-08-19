@@ -10,9 +10,9 @@ import re
 import numpy as np
 
 # blade_damage
-sys.path.insert(0, '../../../../blade-damage/')
+# sys.path.insert(0, '../../../../blade-damage/')
 
-from FAST_util import setupFAST, Calc_max_DEMs, Use_FAST_DEMs, \
+from blade_damage.FAST_util import setupFAST, Calc_max_DEMs, Use_FAST_DEMs, \
     extract_results, define_des_var_domains, remove_sm_dir, \
     initialize_rotor_dv, removed_fixcalc_dir, remove_fixcalc_unnecessary_files
 
